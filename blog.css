@@ -48,7 +48,10 @@ body {
 
 /* Laptop Screen */
 
-header {
+/* Header Styling */
+
+header,
+.hero__section {
   padding: 1em 5.7em;
 }
 
@@ -93,6 +96,59 @@ li a {
   color: var(--text-color-primary-gradient);
 }
 
+/* Hero Section Styling */
+
+.hero__section {
+  margin-top: 4em;
+}
+
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.hero__h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.text-blue {
+  background: linear-gradient(
+    to left,
+    var(--text-color-primary-gradient),
+    var(--text-color-secondary-gradient)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  /* font-weight: inherit; */
+}
+
+.hero__p {
+  font-weight: 500;
+  color: var(--text-color-secondary);
+  line-height: 1.7;
+  letter-spacing: 0.4px;
+  /* width: 49ch; */
+}
+
+.hero__socialIcons {
+  display: flex;
+}
+
+.hero__socialIcons:nth-child(1) {
+  margin-left: -2.8em;
+}
+
+.social-icons {
+  width: 120px;
+  height: 120px;
+  /* margin-left: -2.8em; */
+}
+
+/* Mobile View */
+
 @media screen and (max-width: 768px) {
   header {
     padding: 0.5em 0em;
@@ -136,6 +192,7 @@ li a {
   }
 
   .links {
+    /* z-index: 50; */
     background: #1e293b;
     display: flex;
     flex-direction: column;
@@ -155,5 +212,14 @@ li a {
   /* The toggle */
   .show-links {
     height: 10em;
+  }
+
+  .hero__section {
+    margin-top: 2em;
+    padding: 1em;
+  }
+
+  .hero__p br {
+    display: none;
   }
 }
