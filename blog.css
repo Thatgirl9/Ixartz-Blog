@@ -15,8 +15,11 @@
   --font-style: normal;
 
   /* shadow */
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --light-shadow: 0 5px 15px rgba(63, 71, 163, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+  /* transition */
+  --transition: all 0.3s linear;
 }
 
 *,
@@ -69,8 +72,6 @@ header {
 .links {
   height: auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
   list-style: none;
 }
 
@@ -88,17 +89,30 @@ li a {
   list-style: none;
 }
 
+.links a:hover {
+  color: var(--text-color-primary-gradient);
+}
+
 @media screen and (max-width: 768px) {
   header {
-    padding: 1em 2em;
+    padding: 0.5em 0em;
     background: var(--background-color);
     box-shadow: var(--light-shadow);
+  }
+
+  .nav-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .nav-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding: 1rem;
   }
 
   .nav-toggle {
@@ -108,9 +122,38 @@ li a {
     cursor: pointer;
     background: transparent;
     border-color: transparent;
+    transition: var(--transition);
   }
 
   .links a {
     display: block;
+    transition: var(--transition);
+  }
+
+  .links a:hover {
+    color: var(--text-color-primary-gradient);
+    padding-left: 1.5em;
+  }
+
+  .links {
+    background: #1e293b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 98%;
+
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+  }
+
+  .close {
+    display: none;
+  }
+
+  /* The toggle */
+  .show-links {
+    height: 10em;
   }
 }
