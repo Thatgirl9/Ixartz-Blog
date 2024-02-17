@@ -219,11 +219,20 @@ li a {
   justify-content: space-between;
 }
 
-.all_posts1 {
+.all_posts1,
+.all_posts2 {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.4em;
+}
+
+.all_posts2 {
+  display: none;
+}
+
+.all_posts1:hover {
+  cursor: pointer;
 }
 
 .posts_text {
@@ -235,10 +244,6 @@ li a {
 .arrow {
   width: 2em;
   height: 2em;
-}
-
-.all_posts1:hover {
-  cursor: pointer;
 }
 
 .articles__posts {
@@ -277,6 +282,8 @@ article {
   color: var(--text-color-primary);
   font-size: 0.9rem;
 }
+
+/* --NewsLetter Section Styling-- */
 
 /* Mobile View and Tablet View */
 
@@ -414,5 +421,16 @@ article {
     flex-direction: column;
     gap: 2em;
     flex-wrap: wrap;
+  }
+
+  .all_posts_div {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: 100%;
+  }
+
+  .all_posts2 {
+    display: flex;
   }
 }
