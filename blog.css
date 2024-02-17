@@ -60,7 +60,8 @@ header,
 .hero__section,
 .project__section,
 .posts__section,
-.newsletter__section {
+.newsletter__section,
+.footer__section {
   padding: 1em 6em;
 }
 
@@ -333,6 +334,24 @@ article {
   padding: 0.5em 1.8em;
   border: 1px solid transparent;
   font-weight: 700;
+}
+
+/* Footer Styling */
+footer {
+  margin-top: 6em;
+  border-top: 2px solid var(--text-color-primary);
+}
+
+.footer__section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1em;
+}
+
+.footer-social-icons {
+  width: 1.8em;
+  height: 1.8em;
 }
 
 /* Mobile View and Tablet View */
