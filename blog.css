@@ -59,7 +59,8 @@ body {
 header,
 .hero__section,
 .project__section,
-.posts__section {
+.posts__section,
+.newsletter__section {
   padding: 1em 6em;
 }
 
@@ -285,6 +286,55 @@ article {
 
 /* --NewsLetter Section Styling-- */
 
+.newsletter__section {
+  margin-top: 5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.newsletter__h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.8em;
+}
+
+.newsletter_p {
+  font-size: 1rem;
+}
+
+.newsletter__form {
+  display: flex;
+  /* gap: 1em; */
+  align-items: center;
+  background-color: var(--project-background-color);
+  padding: 0.5em 1em;
+  border-radius: 20px;
+}
+
+.newsletter__input {
+  background-color: transparent;
+  padding: 0.5em 1em;
+  border: 0px solid transparent;
+  border-radius: 10px;
+  /* margin-right: 1em; */
+  width: 300px;
+  outline: none;
+  color: var(--text-color-primary);
+}
+
+.newsletter__btn {
+  background: linear-gradient(
+    to left,
+    var(--text-color-primary-gradient),
+    var(--text-color-secondary-gradient)
+  );
+  border-radius: 20px;
+  padding: 0.5em 1.8em;
+  border: 1px solid transparent;
+  font-weight: 700;
+}
+
 /* Mobile View and Tablet View */
 
 @media screen and (max-width: 768px) {
@@ -387,21 +437,28 @@ article {
     align-items: center;
   }
 
-  /* Posts Section Styling */
-  /* .posts__section {
-    padding: 1em;
-  } */
+  /* NewsLetter Styling */
+  .newsletter__section {
+    padding: 3em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+  }
 
-  /* .header__posts {
-    display: flex;
-    flex-direction: ;
-    justify-content: start;
-    align-items: start;
-  } */
+  .newsletter__form {
+    width: 100%;
+    margin-top: 1em;
+  }
 
-  /* article {
-    width: 80%;
-  } */
+  .newsletter__btn {
+    padding: 0.5em 1.4em;
+  }
+
+  /* Footer Styling */
+  .footer__section {
+    padding: 3em;
+  }
 }
 
 /* Mobile View  */
@@ -409,7 +466,8 @@ article {
 @media screen and (max-width: 640px) {
   /* Shared Styles*/
   .project__section,
-  .posts__section {
+  .posts__section,
+  .newsletter__section {
     padding: 2em;
   }
 
@@ -432,5 +490,15 @@ article {
 
   .all_posts2 {
     display: flex;
+  }
+
+  /* News Letter styling */
+  .newsletter__input {
+    width: 100%;
+  }
+
+  .newsletter__btn {
+    /* width: 100%; */
+    padding: 0.5em 1.4em;
   }
 }
